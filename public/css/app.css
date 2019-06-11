@@ -1,0 +1,510 @@
+@import "../font-awesome/css/font-awesome.min.css";
+
+/*
+ Globals
+ */
+body {
+  margin: 0;
+  background: #fff;
+  color: #353d46;
+  font: 18px/27px 'Oxygen', sans-serif;
+}
+h1, h2, h3 {
+  color: #d94d4d;
+}
+/*
+ Menu
+ */
+#slide-menu {
+  background: #FF1919;
+  position: fixed;
+  top: 0;
+  left: -100px;
+  bottom: 0;
+  display: block;
+  float: left;
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+#slide-menu  ul a{
+text-decoration: none;
+color:white;
+}
+
+#slide-menu  ul a:hover{
+  color: black;
+  }
+
+#slide-menu  ul {
+  display: block;
+  margin: 40px;
+  padding: 0;
+  list-style: none;
+  opacity: 0.5;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+#slide-menu  ul li {
+  color: #fff;
+  padding: 6px 0;
+  cursor: pointer;
+}
+#slide-menu  ul li:hover {
+  color: #000;
+}
+#slide-menu  ul li:before {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  color: #fff;
+  margin-right: 12px;
+  text-align: center;
+  font-variant: normal;
+  font-size: 0.75em;
+  text-transform: none;
+  line-height: 1em;
+}
+#slide-menu ul li.sep {
+  margin-top: 7px;
+  padding-top: 14px;
+  border-top: 1px solid #fff;
+}
+
+#slide-menu  ul li i{
+  padding-right: 10px;
+}
+
+/*
+#slide-menu  ul li.home:before {
+  font-family: 'FontAwesome';
+  content: '\f015';
+}
+#slide-menu  ul li.events:before {
+  content: '\f72f';
+}
+#slide-menu  ul li.calendar:before {
+  content: '\e800';
+}
+#slide-menu  ul li.settings:before {
+  content: '\e803';
+}
+#slide-menu  ul li.map-icon:before {
+  content: "\f3c5";
+  font-family: 'Font Awesome 5 Solid' !important;
+  font-weight: 900 !important;
+}
+*/
+.menu-active #slide-menu {
+  left: 0px;
+}
+.menu-active #slide-menu ul {
+  left: 0px;
+  opacity: 1;
+}
+
+.menu-active .icon-menu-trigger:before{
+  content: '\f060' !important;
+}
+
+/*
+ Content
+ */
+#content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  overflow: scroll;
+  background: #fcfeff;
+  border-radius: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-shadow: -3px 0 6px #4a5562;
+  -webkit-box-shadow: -3px 0 6px #4a5562;
+  box-shadow: -3px 0 6px #4a5562;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+#content .icon-menu-trigger {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 36px;
+  height: 36px;
+  background: #FF1919;
+  cursor: pointer;
+  border-radius: 5px;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+#content .icon-menu-trigger:before {
+  content: '\f061';
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  color: white;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-size: 1.2em;
+  font-weight: 300;
+  font-variant: normal;
+  text-align: center;
+  text-transform: none;
+  line-height: 36px;
+}
+#content .icon-menu-trigger:hover {
+  background: #3faae0;
+}
+#content .icon-menu-trigger:hover:before {
+  color: #fcfeff;
+}
+.menu-active #content {
+  left: 200px;
+  border-radius: 7px 0 0 7px;
+}
+.menu-active #content .icon-menu-trigger {
+  left: 210px;
+}
+
+.main-section{
+  width: 100%;
+}
+
+.head-container-section{
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+}
+
+
+.title-h{
+text-align: center;
+padding-bottom: 40px;
+}
+
+.title-h h1{
+  font-size: 2em;
+  color: #d94d4d;
+}
+
+
+.head-section{
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.head-container{
+  width: 100%;
+}
+
+.logo-text{
+  font-size: 2em;
+  float: right;
+  margin-right: 200px;
+}
+
+.container-block{
+  width: 100%;
+  padding-top: 100px;
+}
+
+.car-type-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.type-cart{
+  position: relative;
+  margin-left: 60px;
+  width: 300px;
+  height: 250px;
+  background-position: bottom; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.car-ligth{
+  background-image: url("../static/ligth.jpg");
+  background-size: 300px 300px;
+}
+
+.first{
+  margin: 0px;
+}
+
+#poligon-car h2{
+  color: white;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+#poligon-car{
+  -webkit-transition: all 0.3s ease;;
+  -moz-transition: all 0.3s ease;;
+  -o-transition: all 0.3s ease;;
+  transition: all 0.3s ease;
+  text-align: center;
+  color:white;
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  width: 240px;
+  border-bottom: 60px solid #ec3504;
+  border-right: 60px solid transparent;
+}
+
+#poligon-car a{
+  border-radius: 25%;
+  margin: auto;
+  width:120px;
+  padding: 5px;
+  border: 2px solid white;
+}
+
+#poligon-car a:hover{
+  color:red;
+  background: #fff;
+}
+
+#poligon-car h3{
+  display: none;
+  color:white;
+}
+
+#poligon-car a{
+  display: none;
+  color:white;
+}
+
+#poligon-car:hover{
+  border-bottom: 250px solid #ec3504;
+}
+
+
+#poligon-car:hover a{
+  display: block;
+}
+
+
+#poligon-car:hover h3{
+  display: block;
+}
+
+.search-input{
+  width: 50%;
+  margin: auto;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+input[type=text]:focus {
+  border: 3px solid #d94d4d;
+}
+
+.mark-container{
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#mark:hover{
+  background: #cecec0;
+  cursor: pointer;
+}
+
+
+.marks{
+  margin-left:40px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-left: 2px solid #d94d4d;
+
+}
+
+.marks h1{
+  margin-left: 10px;
+  color:black;
+}
+
+.mark h3{
+  padding: 0;
+  margin: 0;
+}
+
+.mark{
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top:10px;
+  max-height: 30px;
+  color:#d94d4d;
+  margin-left:10px;
+}
+
+.mark-models-form{
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+  border-left: 3px solid #FF1919;
+}
+
+.mark-models-form h3{
+  color: #332f2f;
+}
+
+.mark-models-form a{
+  display: inline-block;
+  margin-top:30px;
+  padding: 15px;
+  color: #fff;
+  background-color: #FF1919;
+  text-decoration: none;
+}
+
+.mark-models-form a:hover{
+  background-color: #31a048;
+  text-decoration: underline;
+}
+
+.models h1, h3{
+  font-size: 18px;
+}
+
+.models h3{
+  color: #33841d;
+}
+
+.models{
+  border-left: 2px solid #095a1a;
+}
+
+
+
+
+.table-container{
+  margin: auto;
+  width:80%;
+}
+
+
+table {
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background: white;
+}
+table th {
+  background: #ec3504;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+table td a{
+  color: red;
+}
+
+
+#headup{
+  margin-bottom: 40px;
+}
+
+.article-title{
+  color:white !important;
+}
+
+.article-label{
+  background: red;
+  color: white;
+  padding: 5px;
+}
+
+#article{
+  background-image: url("../static/turboback.jpg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+@media screen and (max-width: 768px) {
+
+  .table-container{
+    width:100%;
+  }
+
+  table {
+    border: 0;
+  }
+
+  table thead {
+    display: none;
+  }
+  table tr {
+    margin-bottom: 20px;
+    display: block;
+    border-bottom: 2px solid #ddd;
+  }
+
+  table td {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    border: 0;
+    border-bottom: 1px dotted #ccc;
+  }
+  table td:last-child {
+    border-bottom: 0;
+    border-bottom: 2px solid red;
+  }
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+
+
